@@ -12,7 +12,6 @@ Kerstin Bischoff (Projektleitung)
 Wera Berge (Wissenschaftliche Mitarbeit)  
 [Frederike Booke](https://orcid.org/0000-0002-1108-0160) (Wissenschaftliche Mitarbeit)  
 Janina Esins (Wissenschaftliche Mitarbeit)  
-[Pia Francesca Rissom](https://orcid.org/0000-0001-8371-6378) (Wissenschaftliche Mitarbeit)  
 
 ---
 
@@ -42,11 +41,11 @@ Seit dem 16. April 2020 sind alle intensivbettenführenden Akutkrankenhäuser in
 
 Das Intensivregister erhebt Daten zur Bewertung der intensivmedizinischen Versorgungslage und präsentiert diese Daten täglich gesammelt und aufbereitet auf dieser GitHub-Seite sowie in verschiedenen Zeitreihen, Karten und Tabellen unter www.intensivregister.de.
 Die Daten im Intensivregister werden täglich in zugelassenen Krankenhaus-Standorten, die Intensivbetten zur Akutbehandlung führen, erhoben. Die Standorte aller zugelassenen deutschen Krankenhäuser sind im InEK-Standort-Verzeichnis (https://krankenhausstandorte.de/info) mit eindeutiger Standort-ID registriert und werden regelmäßig aktualisiert.
-Die erfassten Daten umfassen zum einen allgemeine quantitative intensivmedizinische Kapazitäts-daten wie betreibbare und belegte Intensivbetten- und Behandlungskapazitäten für alle Patient\*innen (COVID-19 wie Non-COVID-19). Weiterhin werden COVID-19-Belegungszahlen und -Kapazitäten sowie zusätzliche Spezifikationen zu den COVID-19-Fällen erfasst, wie Anzahl der Neuaufnahmen, Alter nach verschiedenen Altersgruppen und Behandlungsschwere. Zudem werden qualitative Verfügbarkeitsdaten erfasst, die den Intensivstationen eine persönliche Einschätzung der Situation inkl. Gründen von Einschränkungen (z. B. Personalmangel, Materiallogistik, etc.) erlauben. Die Betriebssituation wird durch drei Kategorien beschrieben: *Nicht eingeschränkt* (regulärer Betrieb möglich), *Teilweise eingeschränkt* (regulärer Betrieb gerade noch möglich) und *Eingeschränkte Behandlungskapazität* (ausgelastet oder überlastet).
+Die erfassten Daten umfassen zum einen allgemeine quantitative intensivmedizinische Kapazitäts-daten wie betreibbare und belegte Intensivbetten- und Behandlungskapazitäten für alle Patient\*innen (COVID-19 wie Non-COVID-19). Weiterhin werden COVID-19-Belegungszahlen und -Kapazitäten sowie zusätzliche Spezifikationen zu den COVID-19-Fällen erfasst, wie Anzahl der Neuaufnahmen, Alter nach verschiedenen Altersgruppen und Behandlungsschwere. Zudem werden qualitative Verfügbarkeitsdaten erfasst, die den Intensivstationen (ITS) eine persönliche Einschätzung der Situation inkl. Gründen von Einschränkungen (z. B. Personalmangel, Materiallogistik, etc.) erlauben. Die Betriebssituation wird durch drei Kategorien beschrieben: *Nicht eingeschränkt* (regulärer Betrieb möglich), *Teilweise eingeschränkt* (regulärer Betrieb gerade noch möglich) und *Eingeschränkte Behandlungskapazität* (ausgelastet oder überlastet).
 
 ### Eingabemaske 
 
-Auf der Intensivregister-Website können sich die Intensivstationen initial registrieren und sodann im eingeloggten Bereich die täglichen Kapazitäts- und Belegungszahlen sowie die Auslastung über eine Meldemaske melden. Zudem ist eine (automatisierte) Meldung über eine Schnittstelle (API) des Intensivregisters möglich. 
+Auf der Intensivregister-Website können sich die Intensivstationen (ITS) initial registrieren und sodann im eingeloggten Bereich die täglichen Kapazitäts- und Belegungszahlen sowie die Auslastung über eine Meldemaske melden. Zudem ist eine (automatisierte) Meldung über eine Schnittstelle (API) des Intensivregisters möglich. 
 
 ### Datenaufbereitung
 
@@ -59,6 +58,7 @@ Der Datensatz enthält Daten über den Verlauf der intensivmedizinischen Kapazit
 * *Intensivregister_Bundeslaender_Kapazitaeten.csv*
 * *Intensivregister_Landkreise_Kapazitaeten.csv*
 * *Intensivregister_Deutschland_Altersgruppen.csv*
+* *Intensivregister_Deutschland_Covid_nach_Versorgungsstufen.csv*
 * Lizenz-Dateien mit der Nutzungslizenz des Datensatzes in Deutsch und Englisch
 * Datensatzdokumentation in deutscher Sprache
 * Metadaten-Datei zum Import in Zenodo
@@ -71,6 +71,7 @@ Die hier veröffentlichen Daten sind aggregierte Daten. Mehr Informationen finde
 | Intensivregister_Bundeslaender_ Kapazitaeten| Zeitreihendaten: Anzahl Meldebereiche, ITS-Kapazitäten, COVID-19-Fälle auf ITS, Betriebssituation  | Bundesland | Erwachsene |
 | Intensivregister_Deutschland_ Kapazitaeten  | Zeitreihendaten: Anzahl Meldebereiche, ITS-Kapazitäten, COVID-19-Fälle auf ITS, Betriebssituation  |Deutschland | Erwachsene; Kinder |
 | Intensivregister_Deutschland_ Altersgruppen | Zeitreihendaten: Altersstruktur der COVID-19-Fälle auf ITS | Deutschland | Gesamt (Daten für Erwachsene und Kinder gemeinsam aggregiert) |
+| Intensivregister_Deutschland_ Covid_nach_Versorgungsstufen | Zeitreihendaten: Anzahl Meldebereiche, ITS-Kapazitäten, COVID-19-Fälle auf ITS, Versorgungsgrad; einmalige Bereitstellung für 01.05.2020 bis 05.05.2023  |Deutschland | Gesamt (Daten für Erwachsene und Kinder gemeinsam aggregiert) | 
 
 ### Intensivkapazitäten und COVID-19-Intensivbettenbelegung auf Bundes- und Länderebene
 
@@ -128,7 +129,7 @@ Die *Intensivregister_Landkreise_Kapazitaeten_CSV* enthält die in der folgenden
 | landkreis_id| Character| `01001` bis `16077`: Landkreise| Identifikationsnummer der Landkreise basierend auf dem Amtlichen Gemeindeschlüssel (AGS).|
 | landkreis_name| Character| `SK Flensburg` … `LK Altenburger Land` | Name des Landkreises.|
 | anzahl_standorte | Natürliche Zahl (Integer) | `≥ 1` | Die Anzahl der Standorte gibt an, wie viele Krankenhaus-Standorte im jeweiligen Landkreis eine Meldung abgegeben haben und in den aktuellen Datenstand einfließen. |
-| anzahl_meldebereiche | Natürliche Zahl (Integer) | `≥ 1`  | Ein Meldebereich entspricht einer Intensivstation oder einem Intensivbereich, für welchen das dort arbeitende fachmedizinische Personal Meldungen im DIVI-Intensivregister (täglich) abgibt. Die Anzahl der Meldebereiche gibt an, wie viele Meldebereiche des jeweiligen Landkreises gemeldet haben und in den aktuellen Datenstand einfließen.Die Anzahl der Meldebereiche umfasst Kinder- und Erwachsenen-Intensivstationen |
+| anzahl_meldebereiche | Natürliche Zahl (Integer) | `≥ 1`  | Ein Meldebereich entspricht einer Intensivstation oder einem Intensivbereich, für welchen das dort arbeitende fachmedizinische Personal Meldungen im DIVI-Intensivregister (täglich) abgibt. Die Anzahl der Meldebereiche gibt an, wie viele Meldebereiche des jeweiligen Landkreises gemeldet haben und in den aktuellen Datenstand einfließen. Die Anzahl der Meldebereiche umfasst Kinder- und Erwachsenen-Intensivstationen. |
 | faelle_covid_aktuell | Natürliche Zahl (Integer) | `≥ 0` | Anzahl aller aktuell in intensivmedizinischer Behandlung befindlicher SARS-CoV-2-positiver Patient\*innen (nur bei labordiagnostischem Nukleinsäure- oder Antigennachweis; keine klinischen Verdachtsfälle). Inklusive Zählung von COVID-19-Patient\*innen mit zurückliegendem SARS-CoV-2-Nachweis, die weiterhin mit ihrer COVID-19-Erkrankung intensivmedizinisch behandelt werden. (Erwachsene und Kinder) |
 | faelle_covid_aktuell_invasiv_beatmet | Natürliche Zahl (Integer) | `≥ 0` | Anzahl aktuell invasiv beatmeter COVID-19-Patient\*innen in intensivmedizinischer Behandlung. (Erwachsene und Kinder) Diese Angabe bezieht sich auf COVID-19-Intensivpatient\*innen mit invasiver Beatmung. Das bedeutet nicht, dass die anderen COVID-19-Intensivpatient\*innen nicht beatmet werden. Evtl. erfolgt dort eine nicht-invasive Beatmung.|
 | intensivbetten_frei | Natürliche Zahl (Integer) | `≥ 0` | **BERECHNET:** Anzahl freier betreibbarer Intensivbetten. (Erwachsene und Kinder) Dieser Wert wird errechnet aus der Gesamtzahl aktuell betreibbarer Intensivbetten (hier nicht aufgeführt) minus der Anzahl aktuell belegter Intensivbetten eines Meldebereichs (*intensivbetten_belegt*). Beide Zahlen sind Teil der Abfrage. |
@@ -160,6 +161,25 @@ Die *Intensivregister_Deutschland_Altersgruppen.csv* enthält die in der folgend
 | altersgruppe_70_bis_79 | Natürliche Zahl (Integer) | `≥ 0` | Anzahl der gemeldeten COVID-19-Patient\*innen in der Altersgruppe 70 bis 79 Jahre, die intensivmedizinisch behandelt werden. |
 | altersgruppe_80_plus| Natürliche Zahl (Integer) | `≥ 0` | Anzahl der gemeldeten COVID-19-Patient\*innen in der Altersgruppe 80 bis über 80 Jahre, die intensivmedizinisch behandelt werden.|
 | altersgruppe_unbekannt | Natürliche Zahl (Integer) | `≥ 0` | **BERECHNET**: Anzahl der COVID-19-Patient\*innen, die intensivmedizinisch behandelt werden und für die keine Altersgruppe im Intensivregister gemeldet wurde. | 
+
+### COVID-19-Intensivbettenbelegung nach Versorgungsstufen
+#### Variablen
+
+Die CSV-Datei der Intensivregister_Deutschland_Covid_nach_Versorgungsstufen zeigt die zeitliche Entwicklung der Verteilung von allen COVID-19-Patient\*innen (erwachsene und Kinder), die bundesweit intensivmedizinisch behandelt wurden, auf verschiedene Versorgungsstufen der Kliniken. Diese Daten werden einmalig bereitgestellt für den Zeitraum 01.05.2020 (ca. Beginn der Vollerfassung im Intensicregister) bis 05.05.2023 (WHO erklärt die COVID-19-Pandemie für beendet).
+
+#### Variablenausprägungen
+
+Die *Intensivregister_Deutschland_Covid_nach_Versorgungsstufen.csv* enthält die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen:
+    
+| Variable | Typ | Ausprägung | Beschreibung |
+| -------- | --- | ---------- | ------------ |
+| datum | Datum (ISO8601 Standard)| `JJJJ-MM-TT`| Stichdatum der gemeldeten ITS-Belegung durch COVID-19-ITS-Fälle. |
+| bundesland_id | Character | `00`: Deutschland |Wert für das gesamte Bundesgebiet. |
+| bundesland_name | Character | `Deutschland` | Gesamtes Bundesgebiet.|
+| versorgungsstufen| Character | `UNIVERSITAETSKLINIKUM_MAXIMALVERSORGUNG`, `GRUND_UND_REGELVERSORGUNG`, `SCHWERPUNKTVERSORGUNG`, `FACHKLINIK`, `nicht angegeben`| Zuordnung durch die meldenden Meldebereiche zu welcher Versorgungsstufe ihr Krankenhausstandort gehört. |
+| faelle_covid_aktuell | Natürliche Zahl (Integer) | `≥ 0`| Anzahl der gemeldeten COVID-19-Patient\*innen, die intensivmedizinisch behandelt werden. |
+| intensivbetten_betreibbar | Natürliche Zahl (Integer) | `≥ 0` | Anzahl der gemeldeten aktuell betreibbaren (belegten oder freien) Intensivbetten. |
+| anzahl_meldebereiche | Natürliche Zahl (Integer) | `≥ 1` | Ein Meldebereich entspricht einer Intensivstation oder einem Intensivbereich, für welchen das dort arbeitende fachmedizinische Personal Meldungen im DIVI-Intensivregister (täglich) abgibt. Die Anzahl der Meldebereiche gibt an, wie viele Meldebereiche gemeldet haben und in den aktuellen Datenstand einfließen. Die Anzahl der Meldebereiche umfasst Kinder- und Erwachsenen-Intensivstationen. |    
     
 ## Formatierung der Daten 
 
