@@ -177,7 +177,7 @@ Die *Intensivregister_Deutschland_Covid_nach_Versorgungsstufen.csv* enthält die
 | datum | Datum (ISO8601 Standard)| `JJJJ-MM-TT`| Stichdatum der gemeldeten ITS-Belegung durch COVID-19-ITS-Fälle. |
 | bundesland_id | Character | `00`: Deutschland |Wert für das gesamte Bundesgebiet. |
 | bundesland_name | Character | `Deutschland` | Gesamtes Bundesgebiet.|
-| versorgungsstufen| Character | `UNIVERSITAETSKLINIKUM_MAXIMALVERSORGUNG`, `GRUND_UND_REGELVERSORGUNG`, `SCHWERPUNKTVERSORGUNG`, `FACHKLINIK`, `nicht angegeben`| Zuordnung durch die Meldebereiche zu welcher Versorgungsstufe ihr Krankenhausstandort gehört. |
+| versorgungsstufe| Character | `UNIVERSITAETSKLINIKUM_MAXIMALVERSORGUNG`, `GRUND_UND_REGELVERSORGUNG`, `SCHWERPUNKTVERSORGUNG`, `FACHKLINIK`, `nicht angegeben`| Zuordnung durch die Meldebereiche zu welcher Versorgungsstufe ihr Krankenhausstandort gehört. |
 | faelle_covid_aktuell | Natürliche Zahl (Integer) | `≥ 0`| Anzahl der gemeldeten COVID-19-Patient\*innen, die intensivmedizinisch behandelt werden. |
 | intensivbetten_betreibbar | Natürliche Zahl (Integer) | `≥ 0` | Anzahl der gemeldeten aktuell betreibbaren (belegten oder freien) Intensivbetten. |
 | anzahl_meldebereiche | Natürliche Zahl (Integer) | `≥ 1` | Ein Meldebereich entspricht einer Intensivstation oder einem Intensivbereich, für welchen das dort arbeitende fachmedizinische Personal Meldungen im DIVI-Intensivregister (täglich) abgibt. Die Anzahl der Meldebereiche gibt an, wie viele Meldebereiche gemeldet haben und in den aktuellen Datenstand einfließen. Die Anzahl der Meldebereiche umfasst Kinder- und Erwachsenen-Intensivstationen. |    
