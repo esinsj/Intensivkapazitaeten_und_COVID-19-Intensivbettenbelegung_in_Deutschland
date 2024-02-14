@@ -10,7 +10,6 @@ Kerstin Bischoff (Projektleitung)
 
 
 Wera Berge (Wissenschaftliche Mitarbeit)  
-[Frederike Booke](https://orcid.org/0000-0002-1108-0160) (Wissenschaftliche Mitarbeit)  
 Janina Esins (Wissenschaftliche Mitarbeit)  
 
 ---
@@ -58,7 +57,7 @@ Der Datensatz enthält Daten über den Verlauf der intensivmedizinischen Kapazit
 * *Intensivregister_Bundeslaender_Kapazitaeten.csv*
 * *Intensivregister_Landkreise_Kapazitaeten.csv*
 * *Intensivregister_Deutschland_Altersgruppen.csv*
-* *Intensivregister_Deutschland_Covid_nach_Versorgungsstufen.csv* 🟦🟦 <-- NEU 🟦🟦
+* *Intensivregister_Deutschland_Versorgungsstufen.csv* 🟦🟦 <-- NEU 🟦🟦
 * Lizenz-Dateien mit der Nutzungslizenz des Datensatzes in Deutsch und Englisch
 * Datensatzdokumentation in deutscher Sprache
 * Metadaten-Datei zum Import in Zenodo
@@ -71,7 +70,7 @@ Die hier veröffentlichen Daten sind aggregierte Daten. Mehr Informationen finde
 | Intensivregister_Bundeslaender_ Kapazitaeten| Zeitreihendaten: Anzahl Meldebereiche, ITS-Kapazitäten, COVID-19-Fälle auf ITS, Betriebssituation  | Bundesland | Erwachsene |
 | Intensivregister_Deutschland_ Kapazitaeten  | Zeitreihendaten: Anzahl Meldebereiche, ITS-Kapazitäten, COVID-19-Fälle auf ITS, Betriebssituation  |Deutschland | Erwachsene; Kinder |
 | Intensivregister_Deutschland_ Altersgruppen | Zeitreihendaten: Altersstruktur der COVID-19-Fälle auf ITS | Deutschland | Gesamt (Daten für Erwachsene und Kinder gemeinsam aggregiert) |
-| 🟦🟦 NEU 🟦🟦 Intensivregister_Deutschland_ Covid_nach_Versorgungsstufen | Zeitreihendaten: Anzahl Meldebereiche, ITS-Kapazitäten, COVID-19-Fälle auf ITS, Versorgungsgrad; einmalige Bereitstellung für 01.05.2020 bis 05.05.2023  |Deutschland | Gesamt (Daten für Erwachsene und Kinder gemeinsam aggregiert) | 
+| 🟦🟦 NEU 🟦🟦 Intensivregister_Deutschland_ Versorgungsstufen | Zeitreihendaten: Anzahl Meldebereiche, ITS-Kapazitäten, COVID-19-Fälle auf ITS, Versorgungsgrad; einmalige Bereitstellung für 01.05.2020 bis 05.05.2023  |Deutschland | Gesamt (Daten für Erwachsene und Kinder gemeinsam aggregiert) | 
 
 ### Intensivkapazitäten und COVID-19-Intensivbettenbelegung auf Bundes- und Länderebene
 
@@ -166,11 +165,11 @@ Die *Intensivregister_Deutschland_Altersgruppen.csv* enthält die in der folgend
 ### COVID-19-Intensivbettenbelegung nach Versorgungsstufen
 #### Variablen
 
-Die CSV-Datei der Intensivregister_Deutschland_Covid_nach_Versorgungsstufen zeigt die zeitliche Entwicklung der Verteilung von allen COVID-19-Patient\*innen (Erwachsene und Kinder), die bundesweit intensivmedizinisch behandelt wurden, in Kliniken verschiedener Versorgungsstufen. Diese Daten werden einmalig bereitgestellt für den Zeitraum 01.05.2020 (ca. Beginn der Vollerfassung im Intensivregister) bis 05.05.2023 (WHO erklärt die COVID-19-Pandemie für beendet).
+Die CSV-Datei der Intensivregister_Deutschland_Versorgungsstufen zeigt die zeitliche Entwicklung der Verteilung von allen intensivmedizinisch behandelten COVID-19-Patient\*innen (Erwachsene und Kinder) in Kliniken verschiedener Versorgungsstufen. Diese Daten werden einmalig bereitgestellt für den Zeitraum 01.05.2020 (ca. Beginn der Vollerfassung im Intensivregister) bis 05.05.2023 (WHO erklärt die COVID-19-Pandemie für beendet).
 
 #### Variablenausprägungen
 
-Die *Intensivregister_Deutschland_Covid_nach_Versorgungsstufen.csv* enthält die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen:
+Die *Intensivregister_Deutschland_Versorgungsstufen.csv* enthält die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen:
     
 | Variable | Typ | Ausprägung | Beschreibung |
 | -------- | --- | ---------- | ------------ |
@@ -179,7 +178,7 @@ Die *Intensivregister_Deutschland_Covid_nach_Versorgungsstufen.csv* enthält die
 | bundesland_name | Character | `Deutschland` | Gesamtes Bundesgebiet.|
 | versorgungsstufe| Character | `UNIVERSITAETSKLINIKUM_MAXIMALVERSORGUNG`, `GRUND_UND_REGELVERSORGUNG`, `SCHWERPUNKTVERSORGUNG`, `FACHKLINIK`, `nicht angegeben`| Zuordnung durch die Meldebereiche zu welcher Versorgungsstufe ihr Krankenhausstandort gehört. |
 | faelle_covid_aktuell | Natürliche Zahl (Integer) | `≥ 0`| Anzahl der gemeldeten COVID-19-Patient\*innen, die intensivmedizinisch behandelt werden. |
-| intensivbetten_betreibbar | Natürliche Zahl (Integer) | `≥ 0` | Anzahl der gemeldeten aktuell betreibbaren (belegten oder freien) Intensivbetten. |
+| intensivbetten_betreibbar | Natürliche Zahl (Integer) | `≥ 0` | Anzahl der gemeldeten aktuell betreibbaren (belegten und freien) Intensivbetten. |
 | anzahl_meldebereiche | Natürliche Zahl (Integer) | `≥ 1` | Ein Meldebereich entspricht einer Intensivstation oder einem Intensivbereich, für welchen das dort arbeitende fachmedizinische Personal Meldungen im DIVI-Intensivregister (täglich) abgibt. Die Anzahl der Meldebereiche gibt an, wie viele Meldebereiche gemeldet haben und in den aktuellen Datenstand einfließen. Die Anzahl der Meldebereiche umfasst Kinder- und Erwachsenen-Intensivstationen. |    
 
 🟦🟦 NEUER Abschnitt endet hier 🟦🟦
