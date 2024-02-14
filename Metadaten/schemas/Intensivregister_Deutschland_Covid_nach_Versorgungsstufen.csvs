@@ -1,9 +1,0 @@
-version 1.0
-@totalColumns 7
-datum: xDate
-bundesland_id: positiveInteger and range(0,0)
-bundesland_name: is("Deutschland")
-versorgungsstufe: any("UNIVERSITAETSKLINIKUM_MAXIMALVERSORGUNG"0, "GRUND_UND_REGELVERSORGUNG", "SCHWERPUNKTVERSORGUNG", "FACHKLINIK", "nicht angegeben")
-faelle_covid_aktuell: positiveInteger
-intensivbetten_betreibbar: positiveInteger
-anzahl_meldebereiche: positiveInteger
