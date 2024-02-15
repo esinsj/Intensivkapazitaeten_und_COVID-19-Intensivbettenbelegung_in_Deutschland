@@ -177,10 +177,11 @@ Die *Intensivregister_Deutschland_Versorgungsstufen.csv* enthält die in der fol
 | bundesland_id | Character | `00`: Deutschland |Wert für das gesamte Bundesgebiet. |
 | bundesland_name | Character | `Deutschland` | Gesamtes Bundesgebiet.|
 | versorgungsstufe| Character | `UNIVERSITAETSKLINIKUM_MAXIMALVERSORGUNG`, `GRUND_UND_REGELVERSORGUNG`, `SCHWERPUNKTVERSORGUNG`, `FACHKLINIK`, `nicht angegeben`| Zuordnung durch die Meldebereiche zu welcher Versorgungsstufe ihr Krankenhausstandort gehört. |
+| anzahl_meldebereiche | Natürliche Zahl (Integer) | `≥ 1` | Ein Meldebereich entspricht einer Intensivstation oder einem Intensivbereich, für welchen das dort arbeitende fachmedizinische Personal Meldungen im DIVI-Intensivregister (täglich) abgibt. Die Anzahl der Meldebereiche gibt an, wie viele Meldebereiche gemeldet haben und in den aktuellen Datenstand einfließen. Die Anzahl der Meldebereiche umfasst Kinder- und Erwachsenen-Intensivstationen. | 
 | faelle_covid_aktuell | Natürliche Zahl (Integer) | `≥ 0`| Anzahl der gemeldeten COVID-19-Patient\*innen, die intensivmedizinisch behandelt werden. |
-| intensivbetten_frei | Natürliche Zahl (Integer) | `≥ 0` | **BERECHNET:** Anzahl freier betreibbarer Intensivbetten. (Erwachsene und Kinder) Dieser Wert wird errechnet aus der Gesamtzahl aktuell betreibbarer Intensivbetten (hier nicht aufgeführt) minus der Anzahl aktuell belegter Intensivbetten eines Meldebereichs (*intensivbetten_belegt*). Beide Zahlen sind Teil der Abfrage. |
 | intensivbetten_belegt | Natürliche Zahl (Integer) | `≥ 0` | Anzahl der im Meldebereich aktuell belegten sowie zur Belegung am gleichen Tag verplanten Intensivbetten, unabhängig von der Behandlungsursache (Erwachsene und Kinder). |
-| anzahl_meldebereiche | Natürliche Zahl (Integer) | `≥ 1` | Ein Meldebereich entspricht einer Intensivstation oder einem Intensivbereich, für welchen das dort arbeitende fachmedizinische Personal Meldungen im DIVI-Intensivregister (täglich) abgibt. Die Anzahl der Meldebereiche gibt an, wie viele Meldebereiche gemeldet haben und in den aktuellen Datenstand einfließen. Die Anzahl der Meldebereiche umfasst Kinder- und Erwachsenen-Intensivstationen. |    
+| intensivbetten_frei | Natürliche Zahl (Integer) | `≥ 0` | **BERECHNET:** Anzahl freier betreibbarer Intensivbetten. (Erwachsene und Kinder) Dieser Wert wird errechnet aus der Gesamtzahl aktuell betreibbarer Intensivbetten (hier nicht aufgeführt) minus der Anzahl aktuell belegter Intensivbetten eines Meldebereichs (*intensivbetten_belegt*). Beide Zahlen sind Teil der Abfrage. |
+   
 
 🟦🟦 NEUER Abschnitt endet hier 🟦🟦
   
