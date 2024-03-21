@@ -57,7 +57,7 @@ Der Datensatz enthält Daten über den Verlauf der intensivmedizinischen Kapazit
 * *Intensivregister_Bundeslaender_Kapazitaeten.csv*
 * *Intensivregister_Landkreise_Kapazitaeten.csv*
 * *Intensivregister_Deutschland_Altersgruppen.csv*
-* *Intensivregister_Deutschland_Versorgungsstufen.csv* 🟦🟦 <-- NEU 🟦🟦
+* *Intensivregister_Deutschland_Versorgungsstufen.csv* 
 * Lizenz-Dateien mit der Nutzungslizenz des Datensatzes in Deutsch und Englisch
 * Datensatzdokumentation in deutscher Sprache
 * Metadaten-Datei zum Import in Zenodo
@@ -70,7 +70,7 @@ Die hier veröffentlichen Daten sind aggregierte Daten. Mehr Informationen finde
 | Intensivregister_Bundeslaender_ Kapazitaeten| Zeitreihendaten: Anzahl Meldebereiche, ITS-Kapazitäten, COVID-19-Fälle auf ITS, Betriebssituation  | Bundesland | Erwachsene |
 | Intensivregister_Deutschland_ Kapazitaeten  | Zeitreihendaten: Anzahl Meldebereiche, ITS-Kapazitäten, COVID-19-Fälle auf ITS, Betriebssituation  |Deutschland | Erwachsene; Kinder |
 | Intensivregister_Deutschland_ Altersgruppen | Zeitreihendaten: Altersstruktur der COVID-19-Fälle auf ITS | Deutschland | Gesamt (Daten für Erwachsene und Kinder gemeinsam aggregiert) |
-| 🟦🟦 NEU 🟦🟦 Intensivregister_Deutschland_ Versorgungsstufen | Zeitreihendaten: Anzahl Meldebereiche, ITS-Kapazitäten, COVID-19-Fälle auf ITS, Versorgungsgrad; einmalige Bereitstellung für 01.05.2020 bis 05.05.2023  |Deutschland | Gesamt (Daten für Erwachsene und Kinder gemeinsam aggregiert) | 
+| Intensivregister_Deutschland_ Versorgungsstufen | Zeitreihendaten: Anzahl Meldebereiche, ITS-Kapazitäten, COVID-19-Fälle auf ITS, Versorgungsgrad; einmalige Bereitstellung für 01.05.2020 bis 05.05.2023  |Deutschland | Gesamt (Daten für Erwachsene und Kinder gemeinsam aggregiert) | 
 
 ### Intensivkapazitäten und COVID-19-Intensivbettenbelegung auf Bundes- und Länderebene
 
@@ -161,7 +161,6 @@ Die *Intensivregister_Deutschland_Altersgruppen.csv* enthält die in der folgend
 | altersgruppe_80_plus| Natürliche Zahl (Integer) | `≥ 0` | Anzahl der gemeldeten COVID-19-Patient\*innen in der Altersgruppe 80 bis über 80 Jahre, die intensivmedizinisch behandelt werden.|
 | altersgruppe_unbekannt | Natürliche Zahl (Integer) | `≥ 0` | **BERECHNET**: Anzahl der COVID-19-Patient\*innen, die intensivmedizinisch behandelt werden und für die keine Altersgruppe im Intensivregister gemeldet wurde. | 
 
-🟦🟦 NEUER Abschnitt ab hier 🟦🟦
 ### COVID-19-Intensivbettenbelegung nach Versorgungsstufen
 #### Variablen
 
@@ -183,8 +182,6 @@ Die *Intensivregister_Deutschland_Versorgungsstufen.csv* enthält die in der fol
 | intensivbetten_frei | Natürliche Zahl (Integer) | `≥ 0` | **BERECHNET:** Anzahl freier betreibbarer Intensivbetten. (Erwachsene und Kinder) Dieser Wert wird errechnet aus der Gesamtzahl aktuell betreibbarer Intensivbetten (hier nicht aufgeführt) minus der Anzahl aktuell belegter Intensivbetten eines Meldebereichs (*intensivbetten_belegt*). Beide Zahlen sind Teil der Abfrage. |
    
 
-🟦🟦 NEUER Abschnitt endet hier 🟦🟦
-  
 ## Formatierung der Daten 
 
 Die Daten sind im Datensatz als kommaseparierte .csv Datei enthalten. Der verwendete Zeichensatz der CSV-Datei ist UTF-8. Trennzeichen der einzelnen Werte ist ein Komma “,”. Datumsangaben sind im ISO8601 Standard formatiert.
